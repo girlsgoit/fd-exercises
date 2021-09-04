@@ -1,6 +1,6 @@
 # Stopwatch
 
-### Având HTML-ul dat, scrie JavaScript-ul ca funcționalul de stopwatch
+Având HTML-ul dat, scrie JavaScript-ul ca funcționalul de stopwatch
 să lucreze. La click pe *Start*, trebuie să se pornească stopwatch-ul
 și progresul să fie afișat în DOM. La click pe *Pause* oprim stopwatch-ul.
 La click pe *Reset*, oprim stopwatch-ul și resetăm timp-ul afișat la 00.
