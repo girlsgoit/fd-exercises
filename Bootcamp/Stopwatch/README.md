@@ -1,4 +1,4 @@
-# stopwatch
+# Stopwatch
 
 ### Având HTML-ul dat, scrie JavaScript-ul ca funcționalul de stopwatch
 să lucreze. La click pe *Start*, trebuie să se pornească stopwatch-ul
