@@ -1,32 +1,19 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png">
+    <img  src="./assets/logo.png">
     <h1>Countdown</h1>
-
-    <div class="counter">
-      <div class="counter-header">
-        <input class="seconds-input " type="number" placeholder="seconds">
-        <button class="btn">start</button>
-        <button class="btn">stop</button>
-      </div>
-      <div class="counter-progress">
-        <span>min</span>
-        <span>:</span>
-        <span>sec</span>
-      </div>
-      <div>
-        <h3>
-          Countdown status:
-          <span></span>
-        </h3>
-      </div>
-    </div>
+    <Countdown />
   </div>
 </template>
 
 <script>
+import Countdown from './components/Countdown';
+
 export default {
   name: "App",
+  components: {
+    Countdown
+  },
   data: function() {
     return {};
   },
