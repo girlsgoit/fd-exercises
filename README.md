@@ -3,7 +3,7 @@ Exerciții pe JS și Vue pentru trackul de Front End Dynamic folosite la bootcam
 
 Inspirații pentru exerciții pe tema, mai simple și complexe.
 1. https://www.w3schools.com/js/exercise_js.asp
-2. 
+2. https://www.w3resource.com/javascript-exercises/
 
 ### ToDo:
 - Salvează lista de exerciții mici între sesiuni cu condiția tradusă și revizuită
