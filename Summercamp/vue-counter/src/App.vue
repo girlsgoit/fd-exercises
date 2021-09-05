@@ -1,24 +1,20 @@
 <template>
   <div id="app">
-    <img width="25%" src="./assets/logo.png">
+    <img src="./assets/logo.png">
     <h1>Counter</h1>
 
-    <div>
-      <button class="btn">+</button>
-      <span class="count-value">0</span>
-      <button class="btn">-</button>
-    </div>
+    <Counter/>
   </div>
 </template>
 
 <script>
+import Counter from './components/solution/Counter';
+// import Counter from './components/Counter';
+
 export default {
   name: "App",
-  data: function() {
-    return {};
-  },
-  methods: {
-    increaseValue: {}
+  components: {
+    Counter
   }
 };
 </script>
@@ -31,16 +27,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.btn {
-  font-size: 20px;
-  width: 100px;
-}
-
-.count-value {
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0 10px;
 }
 </style>
