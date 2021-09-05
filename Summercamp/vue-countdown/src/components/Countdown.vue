@@ -1,7 +1,7 @@
 <template>
   <div class="countdown">
     <div class="countdown-header">
-      <input class="seconds-input " type="number" placeholder="seconds">
+      <input class="seconds-input" type="number" placeholder="seconds">
       <button class="btn">start</button>
       <button class="btn">stop</button>
     </div>

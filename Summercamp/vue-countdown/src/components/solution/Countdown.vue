@@ -1,19 +1,20 @@
 <template>
   <div class="countdown">
     <div class="countdown-header">
-      <input class="seconds-input " type="number" placeholder="seconds">
-      <button class="btn">start</button>
-      <button class="btn">stop</button>
+      <input class="seconds-input" type="number" placeholder="seconds" v-model="inputValue">
+      <button class="btn" v-on:click="handleStart">start</button>
+      <button class="btn" v-on:click="handleStop">stop</button>
     </div>
     <div class="countdown-progress">
-      <span>min</span>
+      <span>{{minutes}}m</span>
       <span>:</span>
-      <span>sec</span>
+      <span>{{seconds}}s</span>
     </div>
     <div>
       <h3>
         Countdown status:
-        <span></span>
+        <span v-if="isStopped">Stopped</span>
+        <span v-else>Running</span>
       </h3>
     </div>
   </div>
@@ -23,10 +24,42 @@
 export default {
   name: "Countdown",
   data: function() {
-    return {};
+    return {
+      inputValue: "",
+      currentTime: 0
+    };
   },
-  computed: {},
-  methods: {}
+  computed: {
+    isStopped: function() {
+      return this.currentTime === 0
+    },
+    minutes: function() {
+      const m = Math.floor(this.currentTime / 60);
+      return m < 10 ? '0' + m : m;
+    },
+    seconds: function() {
+      const s = this.currentTime % 60;
+      return s < 10 ? '0' + s : s;
+    }
+  },
+  methods: {
+    handleStart: function() {
+      this.currentTime = Number(this.inputValue);
+      this.inputValue = "";
+
+      clearInterval(this.intervalId);
+      this.intervalId = setInterval(this.tick, 1000);
+    },
+    handleStop: function() {
+      clearInterval(this.intervalId);
+      this.currentTime = 0;
+    },
+    tick: function() {
+      if (!this.currentTime--) {
+        this.handleStop();
+      }
+    }
+  },
 };
 
 </script>
